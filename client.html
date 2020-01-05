@@ -1,0 +1,17 @@
+<html>
+<script>
+var exampleSocket = new WebSocket("ws://localhost:3300", ["protocolOne", "protocolTwo"]);
+
+exampleSocket.onopen = function (event) {
+    exampleSocket.send("Julka woli jogę od informatyki. Nie będziemy się z nią kolegować!");  
+};
+
+
+exampleSocket.onmessage = function (event) {
+    console.log(event.data);
+  }
+</script>
+<body>
+
+</body>
+</html>
